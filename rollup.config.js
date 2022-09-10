@@ -32,7 +32,7 @@ export default [
       del({ targets: ["dist/*"] }),
       typescript(),
       scss(),
-      postcss({ modules: true }),
+      postcss({ modules: true, extract: false, use: ["sass"] }),
     ],
     external: Object.keys(pkg.peerDependencies || {}),
   },
