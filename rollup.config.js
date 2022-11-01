@@ -4,7 +4,9 @@ import del from "rollup-plugin-delete";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-// import sass from "rollup-plugin-sass";
+import copy from "rollup-plugin-copy";
+import svgr from "@svgr/rollup";
+import alias from "@rollup/plugin-alias";
 
 const pkg = require("./package.json");
 
@@ -30,11 +32,18 @@ export default [
       babel({ exclude: "node_modules/*" }),
       del({ targets: ["dist/*"] }),
       typescript(),
+      svgr(),
       postcss({
         extract: false,
         modules: true,
         extensions: [".css", ".scss"],
         use: ["sass"],
+      }),
+      copy({
+        targets: [{ src: "src/assets/icons/**/*", dest: "dist/assets/icons" }],
+      }),
+      alias({
+        entries: [{ find: "assets/icons", replacement: "../../../assets/icons" }],
       }),
     ],
     external: Object.keys(pkg.peerDependencies || {}),

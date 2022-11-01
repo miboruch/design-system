@@ -4,7 +4,6 @@
     "outDir": "'./dist/",
     "rootDir": ".",
     "sourceMap": true,
-    "declaration": true,
     "emitDeclarationOnly": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -28,6 +27,6 @@
     "paths": {},
     "jsx": "react-jsx"
   },
-  "exclude": ["node_modules", "build", "dist", "rollup.config.js"],
+  "exclude": ["node_modules", "build", "dist"],
   "include": ["src"]
 }
