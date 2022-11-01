@@ -9,7 +9,7 @@ export type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = ({ type, text, variant }) => {
   return (
-    <button type={type} className={variant === "primary" ? styles.button : styles.secondary}>
+    <button type={type} className={variant === "primary" ? styles.primary : styles.secondary}>
       {text}
     </button>
   );

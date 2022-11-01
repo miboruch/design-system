@@ -1,6 +1,6 @@
 {
   "name": "react-modern-components",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "description": "",
   "main": "dist/index.cjs.js",
   "source": "src/index.ts",
@@ -13,6 +13,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
+    "start": "rollup -c rollup.config.js -w",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -37,9 +38,11 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
+    "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
+    "node-sass": "^7.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
@@ -48,8 +51,7 @@
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-scss": "^3.0.0",
-    "sass": "^1.54.6",
+    "rollup-plugin-sass": "^1.12.16",
     "typescript": "^4.8.2",
     "webpack": "5"
   },

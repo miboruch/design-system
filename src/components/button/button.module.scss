@@ -1,11 +1,14 @@
 @use "src/assets/styles/variables";
 
 .primary {
-  width: 220px;
+  width: 260px;
+  color: #fff;
+  //background-color: red;
   background-color: variables.$red;
 }
 
 .secondary {
   width: 220px;
+  //background-color: orange;
   background-color: variables.$orange;
 }

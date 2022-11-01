@@ -4,9 +4,8 @@ import del from "rollup-plugin-delete";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import scss from "rollup-plugin-scss";
+// import sass from "rollup-plugin-sass";
 
-// import pkg from "./package.json";
 const pkg = require("./package.json");
 
 export default [
@@ -31,8 +30,12 @@ export default [
       babel({ exclude: "node_modules/*" }),
       del({ targets: ["dist/*"] }),
       typescript(),
-      scss(),
-      postcss({ modules: true, extract: false, use: ["sass"] }),
+      postcss({
+        extract: false,
+        modules: true,
+        extensions: [".css", ".scss"],
+        use: ["sass"],
+      }),
     ],
     external: Object.keys(pkg.peerDependencies || {}),
   },
