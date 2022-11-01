@@ -15,7 +15,10 @@
     "build": "rollup -c",
     "start": "rollup -c rollup.config.js -w",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "format": "prettier --write",
+    "lint": "eslint src --ext .js,.jsx,.tsx,.ts --fix",
+    "prepare": "husky install"
   },
   "author": "miboruch",
   "license": "ISC",
@@ -53,7 +56,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
     "node-sass": "^7.0.3",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
@@ -66,5 +71,16 @@
     "typescript": "^4.8.2",
     "webpack": "5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ]
+  }
 }
