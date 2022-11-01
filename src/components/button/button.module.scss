@@ -1,14 +1,17 @@
 @use "src/assets/styles/variables";
 
-.primary {
+.button {
   width: 260px;
+  font-family: Montserrat, sans-serif;
+}
+
+.primary {
+  @extend .button;
   color: #fff;
-  //background-color: red;
   background-color: variables.$red;
 }
 
 .secondary {
-  width: 220px;
-  //background-color: orange;
+  @extend .button;
   background-color: variables.$orange;
 }

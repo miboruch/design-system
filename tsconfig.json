@@ -28,8 +28,6 @@
     "paths": {},
     "jsx": "react-jsx"
   },
-  "exclude": ["node_modules", "build", "dist",
-    "rollup.config.js"
-  ],
+  "exclude": ["node_modules", "build", "dist", "rollup.config.js"],
   "include": ["src"]
 }

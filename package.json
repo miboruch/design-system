@@ -1,6 +1,6 @@
 {
   "name": "react-modern-components",
-  "version": "0.0.9",
+  "version": "0.1.12",
   "description": "",
   "main": "dist/index.cjs.js",
   "source": "src/index.ts",
@@ -41,7 +41,6 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
-    "@types/node-sass": "^4.11.3",
     "@types/react": "^18.0.18",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
@@ -57,7 +56,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.1",
-    "node-sass": "^7.0.3",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -68,6 +67,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-sass": "^1.12.16",
+    "sass": "^1.55.0",
     "typescript": "^4.8.2",
     "webpack": "5"
   },
