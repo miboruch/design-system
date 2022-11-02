@@ -1,0 +1,60 @@
+@use "src/assets/styles/colors";
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: auto;
+  }
+}
+
+.contained {
+  color: colors.$white;
+  background-color: colors.$blue;
+
+  &:hover {
+    background-color: colors.$dark_blue;
+  }
+
+  &:focus {
+    background-color: colors.$dark_blue;
+  }
+}
+
+.outlined {
+  color: colors.$blue;
+  border: 1px solid colors.$blue;
+  background-color: transparent;
+}
+
+.text {
+  color: colors.$blue;
+
+  &:hover {
+    background-color: colors.$gray_accent;
+  }
+}
+
+.small {
+  height: 32px;
+}
+
+.normal {
+  height: 40px;
+}
+
+.large {
+  height: 50px;
+}

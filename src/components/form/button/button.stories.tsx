@@ -8,20 +8,20 @@ export default {
   component: Button,
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = ({ children, ...args }) => (
-  <Button {...args}>{children}</Button>
-);
+const Template: ComponentStory<typeof Button> = ({ children, ...args }) => <Button {...args}>{children}</Button>;
 
 export const First = Template.bind({});
 
 First.args = {
   children: "First button text",
-  variant: "primary",
+  size: "small",
+  variant: "contained",
 };
 
 export const Secondary = Template.bind({});
 
 Secondary.args = {
   children: "Secondary button text",
-  variant: "secondary",
+  variant: "outlined",
+  size: "normal",
 };

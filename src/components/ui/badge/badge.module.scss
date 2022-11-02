@@ -1,0 +1,33 @@
+@use "src/assets/styles/colors";
+
+.badge {
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 3px;
+  color: colors.$blue;
+  background-color: colors.$blue_accent;
+}
+
+.errorBadge {
+  @extend .badge;
+
+  color: colors.$red;
+  background-color: colors.$red_accent;
+}
+
+.successBadge {
+  @extend .badge;
+
+  color: colors.$green;
+  background-color: colors.$green_accent;
+}
+
+.warningBadge {
+  @extend .badge;
+
+  color: colors.$yellow;
+  background-color: colors.$yellow_accent;
+}

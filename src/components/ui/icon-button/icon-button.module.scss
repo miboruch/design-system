@@ -1,0 +1,87 @@
+@use "src/assets/styles/colors";
+
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.2s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: colors.$blue;
+  background-color: colors.$blue_accent;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: colors.$blue;
+  }
+
+  &:hover {
+    background-color: colors.$blue_accent_hover;
+  }
+}
+
+.deleteButton {
+  @extend .button;
+
+  color: colors.$red;
+  background-color: colors.$red_accent;
+
+  svg {
+    fill: colors.$red;
+  }
+
+  &:hover {
+    background-color: colors.$red_accent_hover;
+  }
+}
+
+.addButton {
+  @extend .button;
+
+  color: colors.$green;
+  background-color: colors.$green_accent;
+
+  svg {
+    fill: colors.$green;
+  }
+
+  &:hover {
+    background-color: colors.$green_accent_hover;
+  }
+}
+
+.small {
+  height: 32px;
+  padding: 4px 8px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.medium {
+  height: 40px;
+  padding: 8px 12px;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.large {
+  height: 50px;
+  padding: 10px 16px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
