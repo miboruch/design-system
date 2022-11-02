@@ -1,8 +1,8 @@
 import React from "react";
 
-export type Variant = "success" | "warning" | "info" | "error";
+export type BadgeVariant = "success" | "warning" | "info" | "error";
 
 export interface BadgeProps {
-  variant?: Variant;
+  variant?: BadgeVariant;
   children: React.ReactNode;
 }

@@ -1,13 +1,13 @@
 import React from "react";
 
-type Size = "small" | "normal" | "large";
+type ButtonSize = "small" | "normal" | "large";
 type ButtonType = "button" | "submit" | "reset";
-type Variant = "contained" | "outlined" | "text";
+type ButtonVariant = "contained" | "outlined" | "text";
 
 export type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  size?: Size;
+  size?: ButtonSize;
   type?: ButtonType;
-  variant?: Variant;
+  variant?: ButtonVariant;
 } & Omit<React.HTMLProps<HTMLButtonElement>, "size">;

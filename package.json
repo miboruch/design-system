@@ -1,6 +1,6 @@
 {
   "name": "react-modern-components",
-  "version": "0.1.21",
+  "version": "0.1.23",
   "description": "",
   "main": "dist/index.cjs.js",
   "source": "src/index.ts",

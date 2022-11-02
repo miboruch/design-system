@@ -12,13 +12,7 @@ import styles from "./modal.module.scss";
   Create a new node in public/index.html with id='modals'
  */
 
-export const Modal: React.FC<ModalProps> = ({
-  isOpen,
-  handleClose,
-  children,
-  containerClassName,
-  boxClassName,
-}) => {
+export const Modal: React.FC<ModalProps> = ({ isOpen, handleClose, children, containerClassName, boxClassName }) => {
   const containerClasses = classNames(
     styles.container,
     containerClassName,
