@@ -1,6 +1,6 @@
 {
   "name": "react-modern-components",
-  "version": "0.1.23",
+  "version": "0.1.26",
   "description": "",
   "main": "dist/index.cjs.js",
   "source": "src/index.ts",
@@ -18,7 +18,10 @@
     "build-storybook": "build-storybook",
     "format": "prettier --write",
     "lint": "eslint src --ext .js,.jsx,.tsx,.ts --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "bump:major": "yarn version --pre --major",
+    "bump:minor": "yarn version --pre --minor",
+    "bump:patch": "yarn version --pre --patch"
   },
   "author": "miboruch",
   "license": "ISC",
@@ -67,6 +70,7 @@
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-includepaths": "^0.2.4",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-sass": "^1.12.16",
