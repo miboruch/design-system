@@ -7,6 +7,7 @@ import dts from "rollup-plugin-dts";
 import copy from "rollup-plugin-copy";
 import svgr from "@svgr/rollup";
 import alias from "@rollup/plugin-alias";
+import includePaths from "rollup-plugin-includepaths";
 
 const pkg = require("./package.json");
 
@@ -33,6 +34,7 @@ export default [
       del({ targets: ["dist/*"] }),
       typescript(),
       svgr(),
+      includePaths({ paths: ["./"] }),
       postcss({
         extract: false,
         modules: true,
@@ -40,7 +42,7 @@ export default [
         use: ["sass"],
       }),
       copy({
-        targets: [{ src: "src/assets/icons/**/*", dest: "dist/assets/icons" }],
+        targets: [{ src: "src/assets/styles/**/*", dest: "dist/assets/styles" }],
       }),
       alias({
         entries: [{ find: "assets/icons", replacement: "../../../assets/icons" }],

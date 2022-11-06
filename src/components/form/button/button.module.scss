@@ -41,6 +41,7 @@
 
 .text {
   color: colors.$blue;
+  background-color: transparent;
 
   &:hover {
     background-color: colors.$gray_accent;

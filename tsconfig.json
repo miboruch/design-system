@@ -23,7 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {},
     "jsx": "react-jsx"
   },
